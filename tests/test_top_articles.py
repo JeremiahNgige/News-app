@@ -1,5 +1,5 @@
 import unittest
-from news_top_articles import latestTopArticles
+from app.news_top_articles import latestTopArticles
 
 class TestTopArticles(unittest.TestCase):
     '''
