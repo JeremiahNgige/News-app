@@ -42,7 +42,7 @@ def get_latest_articles(top-headlines):
         articles_results = None
         if get_articles_response['articles']:
             articles_results_list = get_articles_response['articles']
-            articles_results = process_article_results(articles_results_list)
+            articles_results = process_articles_results(articles_results_list)
             
     return articles_results
             
@@ -61,7 +61,8 @@ def process_results(news_list):
         id = news_item.get('id')
         name = news_item.get('name')
         description = news_item.get('description')
-        url = news_item.get('category')
+        url = news_item.get('url')
+        category = news_item.get('category')
         language = news_item.get('language')
         country = news_item.get('country')
             
@@ -91,6 +92,6 @@ def process_articles_results(articles_list):
             
         if urlToImage:
             article_object = latestTopArticles()
-            article_results.append(articles_object)
+            articles_results.append(articles_object)
         
-    return article_results
+    return articles_results
