@@ -27,12 +27,12 @@ An Application to help you track the top headlines and access news sources' webs
 
 ### Technologies
 
-Python3.8
-PowerShell
-CSS
-JavaScript
-Html:5
-C
+* Python3.8.
+* PowerShell.
+* CSS.
+* JavaScript.
+* Html:5.
+* C.
 
 ### Requirements
 
