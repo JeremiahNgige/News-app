@@ -4,10 +4,11 @@
 {% block content %}
 
     <section class="outer">
-        <div class="outer">
+        <div class="container">
             <h2 class="text-left text-secondary">NEWS SOURCES</h2>
-            <ul class="row">
-                {{ macro.displaySourcesList(sources)  }}
+            <hr class="bg-dark">
+            <ul class="row ul">
+               {{ macro.displaySourcesList(sources) }}
             </ul>
         </div>
     </section>

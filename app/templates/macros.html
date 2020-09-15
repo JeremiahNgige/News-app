@@ -1,20 +1,36 @@
 {% macro displaySourcesList(source_list) %}
     {% for source in source_list  %}
 
-        <li class="col-md-4 col col-md-4 card p-5 text-center rounded shadow-md"
-            style="height: 200px;">
-            <a href="{{ source.url }}" class="stretched-link">{{ source.name }}</a>
-        </li>
+       
+    <li class="col-md-5 col-md-5 m-1">
+        <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-md hmd-250 position-relative bg-white">
+            <div class="col p-3 d-flex flex-column position-static">
+                <h3 class="mb-2 text-danger bold">{{ source.name|truncate(10) }}</h3>
+                <h5 class="mb-2">{{ source.description }}</h5>
+                <div class="mb-2 text-muted">{{ source.country }}</div>
+                <a href="{{ source.url }}" class="stretched-link text-success">Go to website</a>
+          </div>
+        </div>
+
+    </li>
         
     {% endfor %}
     
 {% endmacro %}
 {% macro displayArticlesList(article_list) %}
     {% for article in article_list  %}
-
-        <li class="col-md-4 col col-md-4 card p-5 text-center rounded shadow-md"
-            style="height: 200px;background: url({{article.urlToImage}});">
-            <a href="{{ article.url }}" class="stretched-link btn-link">{{ article.author }}</a>
+        <li class="container m-2">
+            <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-md hmd-250 position-relative bg-white">
+                <div class="col p-3 d-flex flex-column position-static">
+                    <h3 class="mb-2 text-primary bold">{{ article.author|truncate(10) }}</h3>
+                    <h5 class="mb-2">{{ article.description }}</h5>
+                    <div class="mb-2 text-muted">{{ article.publishedAt }}</div>
+                    <a href="{{ article.url }}" class="stretched-link text-info">Continue reading</a>
+              </div>
+              <div class="col-auto d-none d-lg-block">
+                <img class="bd-placeholder-img image-responsive" width="300" height="220" src="{{ article.urlToImage }}" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect></img>
+              </div>
+            </div>
         </li>
         
     {% endfor %}
