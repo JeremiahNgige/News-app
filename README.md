@@ -24,3 +24,20 @@ An Application to help you track the top headlines and access news sources' webs
 
 * Run python3.8 test_news_source.py for Sources class tests.
 * Run python3.8 test_top_articles.py for latestTopArticles class tests.
+
+### Technologies
+
+Python3.8
+PowerShell
+CSS
+JavaScript
+Html:5
+C
+
+### Requirements
+
+All the requirements are listed in the [requirements.txt](requirements.txt)
+
+### License
+
+licensed under the [MIT license](LICENSE).
