@@ -29,11 +29,11 @@ def get_sources(sources):
             
     return news_results
 
-def get_latest_articles(top-headlines):
+def get_latest_articles(top_headlines):
     '''
     function to get url response for the latest articles
     '''
-    get_articles_url = 'http://newsapi.org/v2/{}?lan=en&apikey={}'.format(top-headlines,api_key)
+    get_articles_url = 'http://newsapi.org/v2/{}?lan=en&apikey={}'.format(top_headlines,api_key)
     
     with urllib.request.urlopen(get_articles_url) as url:
         get_articles_data = url.read()

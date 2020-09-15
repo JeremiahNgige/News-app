@@ -3,7 +3,18 @@
 
         <li class="col-md-4 col col-md-4 card p-5 text-center rounded shadow-md"
             style="height: 200px;">
-            <a href="{{ source.url }}"></a>
+            <a href="{{ source.url }}" class="stretched-link">{{ source.name }}</a>
+        </li>
+        
+    {% endfor %}
+    
+{% endmacro %}
+{% macro displayArticlesList(article_list) %}
+    {% for article in article_list  %}
+
+        <li class="col-md-4 col col-md-4 card p-5 text-center rounded shadow-md"
+            style="height: 200px;background: url({{article.urlToImage}});">
+            <a href="{{ article.url }}" class="stretched-link btn-link">{{ article.author }}</a>
         </li>
         
     {% endfor %}
